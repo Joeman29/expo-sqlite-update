@@ -36,7 +36,8 @@
     "preset": "expo-module-scripts"
   },
   "dependencies": {
-    "@expo/websql": "^1.0.1"
+    "@expo/websql": "^1.0.1",
+    "expo": "^45.0.0"
   },
   "devDependencies": {
     "expo-module-scripts": "^2.0.0"
