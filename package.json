@@ -1,5 +1,5 @@
 {
-  "name": "expo-sqlite",
+  "name": "expo-sqlite-updated",
   "version": "10.3.0",
   "description": "Provides access to a database that can be queried through a WebSQL-like API (https://www.w3.org/TR/webdatabase/). The database is persisted across restarts of your app.",
   "main": "build/index.js",
@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "@expo/websql": "^1.0.1",
-    "expo": "^45.0.0"
+    "expo": "^45.0.0",
+    "react-native": "0.68.2"
   },
   "devDependencies": {
     "expo-module-scripts": "^2.0.0"
