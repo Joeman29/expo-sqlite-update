@@ -24,11 +24,11 @@ internal fun ensureDirExists(dir: File): File {
   return dir
 }
 
-internal fun pluginResultsToPrimitiveData(results: List<SQLiteModule.SQLitePluginResult>): List<Any> {
+internal fun pluginResultsToPrimitiveData(results: List<SQLiteModuleUpdated.SQLitePluginResult>): List<Any> {
   return results.map { convertPluginResultToArray(it) }
 }
 
-private fun convertPluginResultToArray(result: SQLiteModule.SQLitePluginResult): List<Any?> {
+private fun convertPluginResultToArray(result: SQLiteModuleUpdated.SQLitePluginResult): List<Any?> {
   val rowsContent = result.rows.map { row ->
     row.map { value ->
       when (value) {

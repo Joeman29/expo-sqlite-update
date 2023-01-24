@@ -22,7 +22,7 @@
   return dispatch_get_main_queue();
 }
 
-EX_EXPORT_MODULE(ExponentSQLite);
+EX_EXPORT_MODULE(ExponentSQLiteUpdated);
 
 - (void)setModuleRegistry:(EXModuleRegistry *)moduleRegistry
 {

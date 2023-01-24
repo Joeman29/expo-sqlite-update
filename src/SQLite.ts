@@ -6,7 +6,7 @@ import { Platform } from 'react-native';
 
 import { Query, ResultSet, ResultSetError, SQLiteCallback, WebSQLDatabase } from './SQLite.types';
 
-const { ExponentSQLite } = NativeModulesProxy;
+const { ExponentSQLiteUpdated } = NativeModulesProxy;
 
 function zipObject(keys: string[], values: any[]) {
   const result = {};
@@ -29,7 +29,7 @@ class SQLiteDatabase {
       throw new Error(`The SQLite database is closed`);
     }
 
-    ExponentSQLite.exec(this._name, queries.map(_serializeQuery), readOnly).then(
+    ExponentSQLiteUpdated.exec(this._name, queries.map(_serializeQuery), readOnly).then(
       (nativeResultSets) => {
         callback(null, nativeResultSets.map(_deserializeResultSet));
       },
@@ -42,7 +42,7 @@ class SQLiteDatabase {
 
   close() {
     this._closed = true;
-    return ExponentSQLite.close(this._name);
+    return ExponentSQLiteUpdated.close(this._name);
   }
 
   deleteAsync(): Promise<void> {
@@ -52,7 +52,7 @@ class SQLiteDatabase {
       );
     }
 
-    return ExponentSQLite.deleteAsync(this._name);
+    return ExponentSQLiteUpdated.deleteAsync(this._name);
   }
 }
 

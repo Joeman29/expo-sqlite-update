@@ -6,6 +6,6 @@ import expo.modules.core.ExportedModule
 
 class SQLitePackage : BasePackage() {
   override fun createExportedModules(context: Context): List<ExportedModule> {
-    return listOf(SQLiteModule(context))
+    return listOf(SQLiteModuleUpdated(context))
   }
 }
