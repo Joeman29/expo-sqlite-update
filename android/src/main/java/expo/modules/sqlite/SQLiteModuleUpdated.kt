@@ -76,6 +76,14 @@ class SQLiteModuleUpdated(private val mContext: Context) : ExportedModule(mConte
     promise.resolve(null)
   }
 
+  private fun castToNonNullString(input: String?) : String {
+    if (input == null) {
+      throw IOException("This should never happen")
+    } else {
+      return input
+    }
+  }
+
   // do a update/delete/insert operation
   private fun doUpdateInBackgroundAndPossiblyThrow(
     sql: String,
@@ -88,7 +96,8 @@ class SQLiteModuleUpdated(private val mContext: Context) : ExportedModule(mConte
           if (bindArgs[i - 1] == null) {
             statement.bindNull(i)
           } else {
-            statement.bindString(i, bindArgs[i - 1])
+            val bindArg = castToNonNullString(bindArgs[i - 1])
+            statement.bindString(i, bindArg)
           }
         }
       }
