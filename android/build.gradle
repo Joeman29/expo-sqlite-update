@@ -28,12 +28,10 @@ buildscript {
 
   repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
   }
 
   dependencies {
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${getKotlinVersion()}")
-    implementation 'com.github.requery:sqlite-android:3.40.1'
   }
 }
 
@@ -83,9 +81,13 @@ android {
   }
 }
 
+repositories {
+  maven { url 'https://jitpack.io' }
+}
+
 dependencies {
   implementation project(':expo-modules-core')
 
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getKotlinVersion()}"
-  implementation 'com.github.requery:sqlite-android:3.40.1'
+  implementation "com.github.requery:sqlite-android:3.40.1"
 }
