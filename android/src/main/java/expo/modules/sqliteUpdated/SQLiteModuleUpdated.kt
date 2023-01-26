@@ -1,5 +1,5 @@
 // Copyright 2015-present 650 Industries. All rights reserved.
-package expo.modules.sqlite
+package expo.modules.sqliteUpdated
 
 import android.content.Context
 import android.database.Cursor

@@ -1,4 +1,4 @@
-package expo.modules.sqlite
+package expo.modules.sqliteUpdated
 
 import android.content.Context
 import expo.modules.core.BasePackage

@@ -1,4 +1,4 @@
-package expo.modules.sqlite
+package expo.modules.sqliteUpdated
 
 import java.io.File
 import java.io.IOException
